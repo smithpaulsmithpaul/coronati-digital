@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Coronati Digital: soluciones digitales para personas y pequeños negocios.">
+  <title>Coronati Digital | Soluciones digitales</title>
+
+  <style>
+    :root {
+      --azul: #10233f;
+      --turquesa: #19b5a5;
+      --fondo: #f5f8fb;
+      --texto: #263449;
+      --blanco: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--texto);
+      background: var(--fondo);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .contenedor {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    header {
+      background: var(--azul);
+      color: var(--blanco);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.2rem 0;
+    }
+
+    .marca {
+      font-size: 1.25rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .marca span { color: var(--turquesa); }
+
+    .enlaces {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+    }
+
+    .enlaces a {
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .enlaces a:hover,
+    .enlaces a:focus-visible { color: var(--turquesa); }
+
+    .hero {
+      padding: 6rem 0;
+      background: linear-gradient(135deg, #10233f, #193f5b);
+      color: var(--blanco);
+    }
+
+    .hero h1 {
+      max-width: 750px;
+      margin: 0 0 1rem;
+      font-size: clamp(2.3rem, 6vw, 4.5rem);
+      line-height: 1.1;
+    }
+
+    .hero p {
+      max-width: 620px;
+      margin-bottom: 2rem;
+      font-size: 1.15rem;
+    }
+
+    .boton {
+      display: inline-block;
+      padding: 0.85rem 1.4rem;
+      border-radius: 8px;
+      background: var(--turquesa);
+      color: var(--azul);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .boton:hover,
+    .boton:focus-visible { background: #70e1d3; }
+
+    section { padding: 4.5rem 0; }
+
+    h2 {
+      margin: 0 0 1rem;
+      color: var(--azul);
+      font-size: 2rem;
+    }
+
+    .introduccion { max-width: 700px; }
+
+    .tarjetas {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+      margin-top: 2rem;
+    }
+
+    .tarjeta {
+      padding: 1.7rem;
+      border-radius: 12px;
+      background: var(--blanco);
+      box-shadow: 0 5px 20px rgba(16, 35, 63, 0.07);
+    }
+
+    .tarjeta h3 {
+      margin-top: 0;
+      color: var(--azul);
+    }
+
+    .contacto { background: #e8f4f3; }
+
+    .contacto p { max-width: 650px; }
+
+    footer {
+      padding: 1.5rem 0;
+      background: var(--azul);
+      color: var(--blanco);
+      text-align: center;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .tarjetas { grid-template-columns: 1fr; }
+
+      .hero { padding: 4.5rem 0; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="contenedor" aria-label="Navegación principal">
+      <a class="marca" href="#inicio">Coronati <span>Digital</span></a>
+      <div class="enlaces">
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="contenedor">
+        <h1>Ideas claras. Soluciones digitales.</h1>
+        <p>
+          Ayudamos a personas y pequeños negocios a dar sus primeros pasos
+          en el mundo digital.
+        </p>
+        <a class="boton" href="#contacto">Hablemos de tu proyecto</a>
+      </div>
+    </section>
+
+    <section id="nosotros">
+      <div class="contenedor">
+        <h2>Sobre nosotros</h2>
+        <p class="introduccion">
+          Coronati Digital es una microempresa en desarrollo. Queremos crear
+          soluciones útiles, fáciles de entender y adaptadas a cada proyecto.
+        </p>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <div class="contenedor">
+        <h2>Lo que podemos crear</h2>
+        <p>Estas son algunas ideas para desarrollar contigo.</p>
+
+        <div class="tarjetas">
+          <article class="tarjeta">
+            <h3>Páginas web</h3>
+            <p>Un espacio en internet para presentar tu negocio y facilitar el contacto.</p>
+          </article>
+
+          <article class="tarjeta">
+            <h3>Catálogos digitales</h3>
+            <p>Una forma sencilla de mostrar tus productos o servicios.</p>
+          </article>
+
+          <article class="tarjeta">
+            <h3>Herramientas para negocios</h3>
+            <p>Proyectos digitales para organizar información y procesos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacto" id="contacto">
+      <div class="contenedor">
+        <h2>Contacto</h2>
+        <p>Cuéntanos tu idea y conversemos sobre cómo hacerla realidad.</p>
+        <a class="boton" href="mailto:smithpaul@agentmail.to">
+          Enviar correo
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="contenedor">
+      <small>&copy; <span id="anio"></span> Coronati Digital.</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("anio").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
